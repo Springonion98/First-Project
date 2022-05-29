@@ -6,3 +6,4 @@ in app.xaml.cs place database conection
 	don't forget using Sqlite; ontop of code
 
 in main window add a stack pannel
+	ListView -> ListView.ItemTemplate -> DataTemplate -> StackPanel -> TextBlock 
