@@ -1,0 +1,8 @@
+for database install SQLite-net-pcl
+make map for classes
+	the name of the class is a entity
+
+in app.xaml.cs place database conection
+	don't forget using Sqlite; ontop of code
+
+in main window add a stack pannel
