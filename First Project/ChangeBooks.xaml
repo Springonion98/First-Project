@@ -7,6 +7,14 @@
         mc:Ignorable="d"
         Title="ChangeBooks" Height="450" Width="800">
     <Grid>
+        <StackPanel>
+            <TextBox x:Name="txtName" Text="name" Margin="0,0,0,5" TextChanged="txtName_TextChanged"/>
+            <TextBox x:Name="txtAuteur" Text="Auteur" Margin="0,0,0,5" TextChanged="txtAuteur_TextChanged"/>
+
+            <Button  x:Name="btnUpdate" Content="Update" Width="50" Margin="0,0,0,5" Click="btnUpdate_Click" />
+            <Button  x:Name="btnDelete" Content="Delete" Width="50" Margin="0,0,0,5" Click="btnDelete_Click" />
+            <Button  x:Name="btnClose" Content="Close" Width="50" Click="btnClose_Click" />
+        </StackPanel>
         
     </Grid>
 </Window>

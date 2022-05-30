@@ -7,3 +7,5 @@ in app.xaml.cs place database conection
 
 in main window add a stack pannel
 	ListView -> ListView.ItemTemplate -> DataTemplate -> StackPanel -> TextBlock 
+
+git test

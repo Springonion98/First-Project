@@ -33,20 +33,6 @@ namespace First_Project
             ReadDatabase();
         }
 
-        private void boookList_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            //SelectionChanged event that opens ContactDetailsWindow
-            Books selectedBooks = (Books)BooksList.SelectedItem;
-            //Each time an item is selected, show the ContactDetailsWindow of that item (item = contact)
-            if (selectedBooks != null)
-            {
-                ChangeBooks changeBooks = new ChangeBooks();
-                changeBooks.ShowDialog(); //Code awaits interaction
-                ReadDatabase(); //Refresh database in ListView element
-            }
-
-        }
-
         void ReadDatabase()
         {
             //Connect and read from database
@@ -67,6 +53,27 @@ namespace First_Project
             //Button opens AddBooks window
             AddBooks addbooks = new AddBooks();
             addbooks.Show();
+        }
+
+
+        public void booksList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Books selectedBooks = (Books)booksList.SelectedItem;
+            if (selectedBooks != null)
+            {
+                ChangeBooks changeBooks = new ChangeBooks(selectedBooks);
+                changeBooks.Show();
+                ReadDatabase();
+            }
+
+       
+
+
+        }
+
+        private void Refresh_Click(object sender, RoutedEventArgs e)
+        {
+            this.ReadDatabase();
         }
     }
 }

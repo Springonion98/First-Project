@@ -10,7 +10,7 @@
         <StackPanel>
             <ListView x:Name="booksList"
                       Height="230"
-                      SelectionChanged="bookList_SelectionChanged">
+                      SelectionChanged="booksList_SelectionChanged">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel>
@@ -25,7 +25,7 @@
                 </ListView.ItemTemplate>
             </ListView>
             <Button x:Name="add_new_book" Content="Add new book" Width="200" Click="add_new_book_Click"/>
-
+            <Button x:Name="Refresh" Content="Refresh" Width="200" Click="Refresh_Click" ></Button>
         </StackPanel>
 
     </Grid>
